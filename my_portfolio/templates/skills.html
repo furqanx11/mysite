@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<section class="resume-section" id="skills">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Skills</h2>
+        <div class="subheading mb-3">Programming Languages</div>
+        <ul class="list-inline dev-icons">
+            <li class="list-inline-item"><i class="fab fa-python"></i></li>
+            <li class="list-inline-item"><i class="fab fa-java"></i></li>
+            <li class="list-inline-item"><i class="fab fa-js"></i></li>
+            <li class="list-inline-item">C++</li>
+            <li class="list-inline-item"><i class="fas fa-database"></i> SQL</li>
+        </ul>
+        <div class="subheading mb-3">Workflow</div>
+        {% for skill in skills %}
+        <ul class="fa-ul mb-0">
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                {{skill.title}}
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
